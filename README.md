@@ -147,7 +147,7 @@ Here's an example result showing the heat map from a series of frames of video, 
 1. Sub-optimal weather (rain, snow, fog)
 1. Inclined roads
 1. Billboards with an image of a car.
-1. Traffic Congestion (severe occlusion of cars)
+1. Traffic congestions (because of severe occlusion of cars)
 
 #### What could be done to make it more robust:
 1. More training samples with wider variety of vehicles.
