@@ -121,11 +121,11 @@ Here's an example result showing the heat map from a series of frames of video, 
 
 ### Here are five frames and their corresponding heat maps:
 
-<img src="./examples/heatmap1.png", width=600>
-<img src="./examples/heatmap2.png", width=600>
-<img src="./examples/heatmap3.png", width=600>
-<img src="./examples/heatmap4.png", width=600>
-<img src="./examples/heatmap5.png", width=600>
+<img src="./examples/heatmap1.png" width=600>
+<img src="./examples/heatmap2.png" width=600>
+<img src="./examples/heatmap3.png" width=600>
+<img src="./examples/heatmap4.png" width=600>
+<img src="./examples/heatmap5.png" width=600>
 
 ### Here is the output of `scipy.ndimage.measurements.label()` on the integrated heat map from all five frames:
 <img src="./examples/heatmap_gray_boxes.png", width=600>
