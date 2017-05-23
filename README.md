@@ -83,7 +83,7 @@ The video processing pipeline calls the function `frame_tracker.process_frame()`
 
 I manually tried different scaling values, and settled on those values because they had the best false-positive vs false-negative tradeoff. The classifier almost never missed cars while only occasionally mis-identifying things which are not cars as cars.
 
-I use the same sliding window increment (2 pixels) as used in the original code. Increasing the value would have speeded up processing, but I left it at the default value since my computer was reasonably fast to process the entire length of the project video (in aprox. 30 min).
+I used the same sliding window increment (2 pixels) as used in the original code. Increasing the value would have speeded up processing, but I left it at the default value since my computer was reasonably fast to process the entire length of the project video (in aprox. 30 min).
 
 #### 2. Examples of test images to demonstrate how my pipeline is working and things I did to optimize the performance of my classifier.
 
@@ -113,7 +113,7 @@ For each frame, the pipeline does the following:
 1. Create a heat map from those bounding boxes. Each point on the heat map has the number that is equal to the number of bounding boxes that enclose it.
 1. Store the heat map in a deque that keeps the most recent 10 heat maps.
 1. Create an integrated heat map by summing up all the heat maps in the deque.
-1. Threshold the integrated heat map. Any point that has a value less than or equal to 5 will be zeroed out. Most false positives get eliminated this way.
+1. Threshold the integrated heat map. Any points that have a value less than or equal to 5 are zeroed out. Most false positives get eliminated this way.
 1. Identify individual blobs in the integrated heat map with `scipy.ndimage.measurements.label()`. 
 1. Construct bounding boxes to cover the area of each blob.
 
@@ -121,17 +121,17 @@ Here's an example result showing the heat map from a series of frames of video, 
 
 ### Here are five frames and their corresponding heat maps:
 
-<img src="examples/heatmap1.png", width=600>
-<img src="examples/heatmap2.png", width=600>
-<img src="examples/heatmap3.png", width=600>
-<img src="examples/heatmap4.png", width=600>
-<img src="examples/heatmap5.png", width=600>
+<img src="./examples/heatmap1.png", width=600>
+<img src="./examples/heatmap2.png", width=600>
+<img src="./examples/heatmap3.png", width=600>
+<img src="./examples/heatmap4.png", width=600>
+<img src="./examples/heatmap5.png", width=600>
 
 ### Here is the output of `scipy.ndimage.measurements.label()` on the integrated heat map from all five frames:
-<img src="examples/heatmap_gray_boxes.png", width=600>
+<img src="./examples/heatmap_gray_boxes.png", width=600>
 
 ### Here the resulting bounding boxes are drawn onto the last frame in the series:
-<img src="examples/final_bounding_boxes.png">
+<img src="./examples/final_bounding_boxes.png">
 ---
 
 ### Discussion
